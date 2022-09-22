@@ -64,6 +64,15 @@ void Error_Handler(void);
 #define RESET_GPIO_Port GPIOA
 #define NSS_Pin GPIO_PIN_4
 #define NSS_GPIO_Port GPIOA
+#define TEST_Pin GPIO_PIN_8
+#define TEST_GPIO_Port GPIOA
+#define TEST_EXTI_IRQn EXTI9_5_IRQn
+#define FIRE0_Pin GPIO_PIN_10
+#define FIRE0_GPIO_Port GPIOA
+#define FIRE0_EXTI_IRQn EXTI15_10_IRQn
+#define FIRE1_Pin GPIO_PIN_11
+#define FIRE1_GPIO_Port GPIOA
+#define FIRE1_EXTI_IRQn EXTI15_10_IRQn
 #define LED_RED_Pin GPIO_PIN_12
 #define LED_RED_GPIO_Port GPIOA
 #define LED_GRN_Pin GPIO_PIN_15
