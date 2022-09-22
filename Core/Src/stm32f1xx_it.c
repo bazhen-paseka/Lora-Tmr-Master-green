@@ -57,8 +57,10 @@
 /* External variables --------------------------------------------------------*/
 extern TIM_HandleTypeDef htim4;
 /* USER CODE BEGIN EV */
+
 	extern	uint32_t 	ch_u32[5] ;
 	extern	uint32_t 	DIO0_status ;
+
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -225,7 +227,7 @@ void EXTI9_5_IRQHandler(void)
   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
 
 	ch_u32[0] = 1;
-	//	HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+	ch_u32[1] = 1;
 
   /* USER CODE END EXTI9_5_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(TEST_Pin);
@@ -241,7 +243,7 @@ void TIM4_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM4_IRQn 0 */
 
-	ch_u32[0] = 1;
+	//	ch_u32[0] = 1;
 
   /* USER CODE END TIM4_IRQn 0 */
   HAL_TIM_IRQHandler(&htim4);
@@ -258,7 +260,12 @@ void EXTI15_10_IRQHandler(void)
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
 
 	ch_u32[0] = 1;
-	//HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
+	if ( HAL_GPIO_ReadPin(FIRE0_GPIO_Port, FIRE0_Pin) == GPIO_PIN_RESET ) {
+	 ch_u32[2] = 1;
+	}
+	if ( HAL_GPIO_ReadPin(FIRE1_GPIO_Port, FIRE1_Pin) == GPIO_PIN_RESET ) {
+	 ch_u32[3] = 1;
+	}
 
   /* USER CODE END EXTI15_10_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(FIRE0_Pin);
