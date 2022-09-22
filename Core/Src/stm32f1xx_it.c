@@ -259,12 +259,10 @@ void EXTI15_10_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
 
-	ch_u32[0] = 1;
-	if ( HAL_GPIO_ReadPin(FIRE0_GPIO_Port, FIRE0_Pin) == GPIO_PIN_RESET ) {
-	 ch_u32[2] = 1;
-	}
-	if ( HAL_GPIO_ReadPin(FIRE1_GPIO_Port, FIRE1_Pin) == GPIO_PIN_RESET ) {
-	 ch_u32[3] = 1;
+	if ( 	( HAL_GPIO_ReadPin(FIRE0_GPIO_Port, FIRE0_Pin) == GPIO_PIN_RESET )
+		&& 	( HAL_GPIO_ReadPin(FIRE1_GPIO_Port, FIRE1_Pin) == GPIO_PIN_RESET )) {
+		ch_u32[0] = 1;
+		ch_u32[2] = 1;
 	}
 
   /* USER CODE END EXTI15_10_IRQn 0 */
