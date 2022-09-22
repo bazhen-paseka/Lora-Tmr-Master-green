@@ -1,0 +1,12 @@
+[submodule "Drivers/LoRa-Contact_sm"]
+	path = Drivers/LoRa-Contact_sm
+	url = https://github.com/bazhen-paseka/LoRa-Contact_sm.git
+[submodule "Drivers/LoRa-sx1278_sm"]
+	path = Drivers/LoRa-sx1278_sm
+	url = https://github.com/bazhen-paseka/LoRa-sx1278_sm.git
+[submodule "Drivers/adc_light_stm32f103_hal_sm"]
+	path = Drivers/adc_light_stm32f103_hal_sm
+	url = https://github.com/bazhen-paseka/adc_light_stm32f103_hal_sm.git
+[submodule "Drivers/AES_sm"]
+	path = Drivers/AES_sm
+	url = https://github.com/bazhen-paseka/AES_sm.git
