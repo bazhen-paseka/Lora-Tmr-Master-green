@@ -27,7 +27,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
 	#include "LoRa-Contact_SM.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,14 +97,17 @@ int main(void)
   MX_TIM4_Init();
   MX_CRC_Init();
   /* USER CODE BEGIN 2 */
-  LoRa_Contact_Init();
+
+  LoRa_Master_Init();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  LoRa_Contact_Main();
+	  LoRa_Master_Main();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

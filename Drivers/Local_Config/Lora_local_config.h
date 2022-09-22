@@ -23,21 +23,10 @@
 *								    DEFINES                     
 **************************************************************************
 */
-	#define SOFT_VERSION 	3100
-//	#define MASTER
 
-#ifdef MASTER
-	//#define		ADC_COEFFICIENT		8233	//	for 2R
-	#define		ADC_COEFFICIENT		5400	//	for 3R
-#else
-	#define 	SLAVE
-	#define 	SLAVE_QNT			5
-	#define 	SLAVE_NUMBER		1
-	//#define		ADC_COEFFICIENT		5400	//	for 3R
+	#define 	SOFT_VERSION 		4020
+	#define		MASTER
 	#define		ADC_COEFFICIENT		8233	//	for 2R
-	#define 	LOW_POWER_STOP_MODE		//	STOP much better then SLEEP
-//	#define 	LOW_POWER_SLEEP_MODE
-#endif
 
 /*
 **************************************************************************
