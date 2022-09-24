@@ -72,6 +72,8 @@ void Error_Handler(void);
 #define FIRE_EXTI_IRQn EXTI15_10_IRQn
 #define LED_Pin GPIO_PIN_12
 #define LED_GPIO_Port GPIOA
+#define VBR_Pin GPIO_PIN_15
+#define VBR_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
