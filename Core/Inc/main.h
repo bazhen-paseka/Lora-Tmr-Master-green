@@ -67,16 +67,13 @@ void Error_Handler(void);
 #define TEST_Pin GPIO_PIN_8
 #define TEST_GPIO_Port GPIOA
 #define TEST_EXTI_IRQn EXTI9_5_IRQn
-#define FIRE0_Pin GPIO_PIN_10
-#define FIRE0_GPIO_Port GPIOA
-#define FIRE0_EXTI_IRQn EXTI15_10_IRQn
-#define FIRE1_Pin GPIO_PIN_11
-#define FIRE1_GPIO_Port GPIOA
-#define FIRE1_EXTI_IRQn EXTI15_10_IRQn
-#define LED_RED_Pin GPIO_PIN_12
-#define LED_RED_GPIO_Port GPIOA
-#define LED_GRN_Pin GPIO_PIN_15
-#define LED_GRN_GPIO_Port GPIOA
+#define FIRE_Pin GPIO_PIN_10
+#define FIRE_GPIO_Port GPIOA
+#define FIRE_EXTI_IRQn EXTI15_10_IRQn
+#define LED_Pin GPIO_PIN_12
+#define LED_GPIO_Port GPIOA
+#define VBR_Pin GPIO_PIN_15
+#define VBR_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

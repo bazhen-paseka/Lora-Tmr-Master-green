@@ -55,11 +55,13 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern TIM_HandleTypeDef htim4;
+
 /* USER CODE BEGIN EV */
 
-	extern	uint32_t 	ch_u32[5] ;
+	//	extern	uint32_t 	ch_u32[5] ;
 	extern	uint32_t 	DIO0_status ;
+	extern 	uint32_t button_test ;
+	extern 	uint32_t button_fire ;
 
 /* USER CODE END EV */
 
@@ -226,8 +228,9 @@ void EXTI9_5_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI9_5_IRQn 0 */
 
-	ch_u32[0] = 1;
-	ch_u32[1] = 1;
+//	ch_u32[0] = 1;
+//	ch_u32[1] = 1;
+	button_test = 1;
 
   /* USER CODE END EXTI9_5_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(TEST_Pin);
@@ -237,37 +240,21 @@ void EXTI9_5_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles TIM4 global interrupt.
-  */
-void TIM4_IRQHandler(void)
-{
-  /* USER CODE BEGIN TIM4_IRQn 0 */
-
-	//	ch_u32[0] = 1;
-
-  /* USER CODE END TIM4_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim4);
-  /* USER CODE BEGIN TIM4_IRQn 1 */
-
-  /* USER CODE END TIM4_IRQn 1 */
-}
-
-/**
   * @brief This function handles EXTI line[15:10] interrupts.
   */
 void EXTI15_10_IRQHandler(void)
 {
   /* USER CODE BEGIN EXTI15_10_IRQn 0 */
 
-	if ( 	( HAL_GPIO_ReadPin(FIRE0_GPIO_Port, FIRE0_Pin) == GPIO_PIN_RESET )
-		&& 	( HAL_GPIO_ReadPin(FIRE1_GPIO_Port, FIRE1_Pin) == GPIO_PIN_RESET )) {
-		ch_u32[0] = 1;
-		ch_u32[2] = 1;
-	}
+//	if ( 	( HAL_GPIO_ReadPin(FIRE0_GPIO_Port, FIRE0_Pin) == GPIO_PIN_RESET )
+//		&& 	( HAL_GPIO_ReadPin(FIRE1_GPIO_Port, FIRE1_Pin) == GPIO_PIN_RESET )) {
+//		ch_u32[0] = 1;
+//		ch_u32[2] = 1;
+	button_fire = 1 ;
+//	}
 
   /* USER CODE END EXTI15_10_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(FIRE0_Pin);
-  HAL_GPIO_EXTI_IRQHandler(FIRE1_Pin);
+  HAL_GPIO_EXTI_IRQHandler(FIRE_Pin);
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
 
   /* USER CODE END EXTI15_10_IRQn 1 */
