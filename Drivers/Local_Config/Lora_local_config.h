@@ -24,7 +24,7 @@
 **************************************************************************
 */
 
-	#define 	SOFT_VERSION 		4050
+	#define 	SOFT_VERSION 		4060
 	#define		MASTER
 	#define		ADC_COEFFICIENT		8233	//	for 2R
 
